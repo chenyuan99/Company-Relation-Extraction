@@ -2,9 +2,12 @@ import sys
 sys.path.append('..')
 import fewshot_re_kit
 import torch
+import leidenalg
+import igraph as ig
 from torch import autograd, optim, nn
 from torch.autograd import Variable
 from torch.nn import functional as F
+from sklearn.metrics.pairwise import cosine_similarity
 
 class ProtoHATT(fewshot_re_kit.framework.FewShotREModel):
     
